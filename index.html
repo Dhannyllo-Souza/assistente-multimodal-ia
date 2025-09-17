@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus AI - Assistente Multimodal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app-container">
+        <header>
+            <img src="ai_avatar.png" alt="AI Avatar" id="ai-avatar">
+            <h1>Nexus AI</h1>
+            <p>Sua plataforma para gerar textos, códigos, sites, imagens e muito mais com IA.</p>
+        </header>
+        <main>
+            <nav id="mode-selector">
+                <button class="mode-btn active" data-mode="text">Texto</button>
+                <button class="mode-btn" data-mode="code">Código</button>
+                <button class="mode-btn" data-mode="site">Site</button>
+                <button class="mode-btn" data-mode="game">Jogo</button>
+                <button class="mode-btn" data-mode="image">Imagem</button>
+                <button class="mode-btn" data-mode="video">Vídeo</button>
+                <button class="mode-btn" data-mode="audio">Áudio 8D</button>
+            </nav>
+            <div id="interaction-area">
+                <div id="input-area">
+                    <textarea id="prompt-input" placeholder="Digite seu comando... por exemplo, 'crie um poema sobre o espaço'" rows="1"></textarea>
+                    <button id="generate-btn" title="Gerar Conteúdo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-zap"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                        <span>Gerar</span>
+                    </button>
+                </div>
+                <div id="output-area">
+                    <div class="placeholder">Aguardando seu comando para começar a criar...</div>
+                </div>
+                <div id="output-actions" class="hidden">
+                    <button id="download-btn" title="Baixar Conteúdo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        <span>Download</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>Powered by Advanced AI Technology. Text & Image generation via public APIs.</p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
